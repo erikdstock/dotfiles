@@ -103,5 +103,9 @@ which -s subl && export EDITOR="subl --wait"
 # Useful aliases
 
 alias e=subl
+alias a=atom
 alias be="bundle exec"
 alias yolo="be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed"
+alias lyn="learnyounode"
+
+# November 20 2015
