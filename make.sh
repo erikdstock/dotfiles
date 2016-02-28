@@ -29,3 +29,11 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# back up list of currently-installed casks and brews
+echo "Creating brew lists..."
+brew list > ./app-lists/brew-list.md
+echo "... And casks:"
+brew cask list > ./app-lists/cask-list.md
+echo "Finished"
+
