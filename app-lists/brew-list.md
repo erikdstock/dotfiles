@@ -1,9 +1,12 @@
 autoconf
 bash
 boost
+cask
 composer
+emacs
 exercism
 freetype
+gdbm
 gettext
 git
 icu4c
@@ -20,7 +23,9 @@ php56-mcrypt
 phpunit
 pkg-config
 postgresql
+python
 rbenv
 readline
 ruby-build
+sqlite
 unixodbc

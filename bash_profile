@@ -22,6 +22,8 @@ test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PAT
 # Path for Heroku
 test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
 
+export PATH=/usr/local/share/python:$PATH
+
 # Load git completions
 git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
 test -s $git_completion_script && source $git_completion_script
@@ -72,10 +74,12 @@ which -s subl && export EDITOR="subl --wait"
 
 # Useful aliases
 
-alias e=subl
-alias a=atom
+# alias e=subl
+alias e=atom
 alias be="bundle exec"
 alias yolo="be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed"
 alias lyn="learnyounode"
+alias godose="cd ~/Documents/code/dose"
+alias gopersonal="cd ~/Documents/code"
 
-# Feb 28 2016
+source ~/dotfiles/scripts/docker_helper.sh

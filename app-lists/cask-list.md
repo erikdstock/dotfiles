@@ -7,6 +7,8 @@ dockertoolbox
 google-chrome
 google-drive
 google-photos-backup
+grandperspective
+heroku-toolbelt
 iterm2
 sequel-pro
 skype
