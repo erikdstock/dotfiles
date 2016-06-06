@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo 'sourcing docker_helper from dotfiles'
 # colors for making things pretty
 C_RED="\033[0;31m"
 C_YELLOW="\033[0;33m"

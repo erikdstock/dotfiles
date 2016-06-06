@@ -2,12 +2,12 @@
 
 echo "Loading ~/.bash_profile"
 echo "Logged in as $USER at $(hostname)"
+# echo $PATH # for debugging path order later TODO
 
 # Rbenv autocomplete and shims (which means rvm shouldn't be)
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Path for RBENV
 test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
-echo $PATH
 
 # Path changes are made non-destructive with PATH=new_path;$PATH   This is like A=A+B so we preserve the old path
 # Path order matters, putting /usr/local/bin: before $PATH
@@ -36,9 +36,17 @@ test -s $git_completion_script && source $git_completion_script
 # Load aliases
 source $HOME/dotfiles/scripts/aliases.sh
 
+
+### These prompts may be mutually exclusive so pick one
 # Load DBC-style git prompt
 [ -e $HOME/dotfiles/scripts/git_prompt.sh ] && source $HOME/dotfiles/scripts/git_prompt.sh
 
+# # iterm2 shell integration
+# # https://iterm2.com/documentation-shell-integration.html
+# test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
+# Powerline-shell
+echo '*powerline-shell prompt not configured*'
+### End prompts ###
 
 # Colors ls should use for folders, files, symlinks etc, see `man ls` and
 # search for LSCOLORS
@@ -49,6 +57,7 @@ alias ls='ls -Gh'
 # Force grep to always use the color option and show line numbers ... changing this to auto to make a nokogiri gem install
 export GREP_OPTIONS='--color=auto'
 
+
 # Set sublime or atom as the default editor
 # which -s subl && export EDITOR="subl --wait"
 which -s atom && export EDITOR="atom -nw"
@@ -56,4 +65,4 @@ which -s atom && export EDITOR="atom -nw"
 # Load .profile, the system-wide initialization script (watch for redundancies)
 source ~/.profile
 
-echo "look into refining your PATH & order someday"
+echo "*look into refining your PATH & order someday*"
