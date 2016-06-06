@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Sourcing git_prompt from dotfiles"
+
 # A more colorful prompt - Alternative to powerline-shell from DBC dotfiles
 # \[\e[0m\] resets the color to default color
 c_reset='\[\e[0m\]'

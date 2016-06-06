@@ -1,5 +1,5 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
+echo "Sourcing docker_helper from dotfiles"
 # From Dose/By Andrew Proksel/Not for Version Control.
 
 # colors for making things pretty

@@ -9,12 +9,15 @@ echo "Logged in as $USER at $(hostname)"
 # # Path for RBENV
 # test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
 
+   # OR #
+
 # Load RVM into a shell session *as a function*
 # Path for RVM
 test -d "$HOME/.rvm/bin" && PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-###
+
+###### end of ruby env stuff ######
 
 
 # Path changes are made non-destructive with PATH=new_path;$PATH   This is like A=A+B so we preserve the old path
@@ -34,8 +37,13 @@ export PATH=/usr/local/share/python:$PATH
 git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
 test -s $git_completion_script && source $git_completion_script
 
+# Load docker_helper if it is in ~dotfiles/scripts/
+[ -e $HOME/dotfiles/scripts/docker_helper.sh ] && source $HOME/dotfiles/scripts/docker_helper.sh
 # Load DBC-style git prompt
-source "$HOME/dotfiles/scripts/git_prompt.sh"
+[ -e $HOME/dotfiles/scripts/git_prompt.sh ] && source $HOME/dotfiles/scripts/git_prompt.sh
+# Load dose-specific aliases
+source $HOME/dotfiles/scripts/aliases.sh
+
 
 # Colors ls should use for folders, files, symlinks etc, see `man ls` and
 # search for LSCOLORS
@@ -46,17 +54,6 @@ alias ls='ls -Gh'
 # Force grep to always use the color option and show line numbers ... changing this to auto to make a nokogiri gem install
 export GREP_OPTIONS='--color=auto'
 
-# Set sublime as the default editor
-which -s subl && export EDITOR="subl --wait"
-
-# Useful aliases
-
-# alias e=subl
-alias e=atom
-alias be="bundle exec"
-alias yolo="be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed"
-alias lyn="learnyounode"
-alias godose="cd ~/Documents/code/dose"
-alias gopersonal="cd ~/Documents/code"
-
-source ~/dotfiles/scripts/docker_helper.sh
+# Set sublime or atom as the default editor
+# which -s subl && export EDITOR="subl --wait"
+which -s atom && export EDITOR="atom -nw"
