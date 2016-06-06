@@ -44,8 +44,10 @@ source $HOME/dotfiles/scripts/aliases.sh
 # # iterm2 shell integration
 # # https://iterm2.com/documentation-shell-integration.html
 # test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
+
 # Powerline-shell
 echo '*powerline-shell prompt not configured*'
+
 ### End prompts ###
 
 # Colors ls should use for folders, files, symlinks etc, see `man ls` and
