@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-echo "Sourcing docker_helper from dotfiles"
-# From Dose/By Andrew Proksel/Not for Version Control.
+#!/bin/bash
 
 # colors for making things pretty
 C_RED="\033[0;31m"
