@@ -7,5 +7,4 @@ alias showpath='echo "${PATH//:/$'"'\n'}\""
 alias gitroot="cd \$(git rev-parse --show-toplevel)"
 
 # MBA Structure
-alias godose="cd ~/Documents/code/dose"
-alias gopersonal="cd ~/Documents/code"
+alias godev="cd ~/dev"

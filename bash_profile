@@ -39,14 +39,20 @@ source $HOME/dotfiles/scripts/aliases.sh
 
 ### These prompts may be mutually exclusive so pick one
 # Load DBC-style git prompt
-[ -e $HOME/dotfiles/scripts/git_prompt.sh ] && source $HOME/dotfiles/scripts/git_prompt.sh
+# [ -e $HOME/dotfiles/scripts/git_prompt.sh ] && source $HOME/dotfiles/scripts/git_prompt.sh
 
 # # iterm2 shell integration
 # # https://iterm2.com/documentation-shell-integration.html
 # test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
 # Powerline-shell
-echo '*powerline-shell prompt not configured*'
+function _update_ps1() {
+    PS1="$(~/dotfiles/powerline-shell/powerline-shell.py $? 2> /dev/null)"
+}
+
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 
 ### End prompts ###
 
