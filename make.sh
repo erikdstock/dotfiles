@@ -31,8 +31,28 @@ for file in $files; do
 done
 
 echo "installing powerline-shell with existing configuration"
-./powerline-shell/install.py &&
-echo "...done"
+# local powerline-config.py will be copied into powerline-shell
+if [ -d powerline-shell ]; then
+  cd powerline-shell
+  cp ../powerline-config.py ./config.py && \
+  ./install.py && \
+  echo "...done"
+  cd -
+else
+  echo "powerline-shell directory doesn't exist- maybe clone it"
+fi
+
+# echo "installing powerline-docker"
+# if which rbenv > /dev/null
+# then
+# 	statement1
+# 	statement2
+# 	.
+# else
+# 	statement3
+# 	statement4
+# 	.
+# fi
 
 
 # back up list of currently-installed casks and brews
