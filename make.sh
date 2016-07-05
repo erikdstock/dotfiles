@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bash_profile vimrc vim zshrc bash-it irbrc"    # list of files/folders to symlink in homedir
+files="bash_profile profile vimrc vim zshrc bash-it irbrc"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -29,6 +29,11 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+echo "installing powerline-shell with existing configuration"
+./powerline-shell/install.py &&
+echo "...done"
+
 
 # back up list of currently-installed casks and brews
 echo "Creating brew lists..."

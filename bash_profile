@@ -13,6 +13,7 @@ test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
 # Path order matters, putting /usr/local/bin: before $PATH
 # ensures brew programs will be seen and used before another program
 # of the same name is called
+#
 
 # Path for brew
 test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
@@ -45,14 +46,9 @@ source $HOME/dotfiles/scripts/aliases.sh
 # # https://iterm2.com/documentation-shell-integration.html
 # test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
 
-# Powerline-shell
-function _update_ps1() {
-    PS1="$(~/dotfiles/powerline-shell/powerline-shell.py $? 2> /dev/null)"
-}
+# Powerline-shell- see .profile
 
-if [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+
 
 ### End prompts ###
 
