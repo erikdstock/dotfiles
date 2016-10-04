@@ -20,7 +20,6 @@ test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PAT
 # Path for Heroku
 test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
 
-export PATH=/usr/local/share/python:$PATH
 # Composer path
 export PATH=$PATH:~/.composer/vendor/bin
 
