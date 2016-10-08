@@ -20,7 +20,12 @@ test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PAT
 # Path for Heroku
 test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
 
-export PATH=/usr/local/share/python:$PATH
+# No longer needed per brew
+# export PATH=/usr/local/share/python:$PATH
+
+#recommended after install of Go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
 # Composer path
 export PATH=$PATH:~/.composer/vendor/bin
 
@@ -70,3 +75,6 @@ which -s subl && export EDITOR="subl --wait"
 source ~/.profile
 
 echo "*look into refining your PATH & order someday*"
+
+export NVM_DIR="/Users/eriks/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
