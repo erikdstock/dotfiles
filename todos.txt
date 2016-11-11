@@ -1,8 +1,9 @@
 powerline-shell doesn't work immediately
 	python might need to be installed via brew (for pip?)
 	powerline might need to be installed via pip
-	actually, powerline needs to be cloned from git repo 
+	* actually, powerline needs to be cloned from git repo *
 	test for powerline shell folder doesn't work bc the repo already has empty folder.
 need dependencies list?
 screenshot save location (not really dotfiles but)
 remove/update docker helper stuff
+* Check that nvm install at end of bash_profile is correct- ie it will work before nvm is installed?

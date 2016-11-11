@@ -69,3 +69,6 @@ which -s subl && export EDITOR="subl --wait"
 source ~/.profile
 
 echo "*look into refining your PATH & order someday*"
+
+export NVM_DIR="/Users/eriks/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
