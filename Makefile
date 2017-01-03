@@ -15,3 +15,6 @@ install_python: install_brew
 
 install_ruby: install_brew
 	echo "install_ruby- todo"
+
+copy_global_configs:
+	echo "copy configs for linters, git, etc"

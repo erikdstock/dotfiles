@@ -1,0 +1,10 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  { "key": "shift+cmd+=",           "command": "editor.fold",
+                                     "when": "editorTextFocus" },
+  { "key": "shift+cmd+-",           "command": "editor.unfold",
+                                     "when": "editorTextFocus" },
+  { "key": "shift+cmd+[",           "command": "workbench.action.previousEditor"},
+  { "key": "shift+cmd+]",           "command": "workbench.action.nextEditor" },
+  {"key": "shift+cmd+r",           "command": "workbench.action.tasks.runTask" }
+]
