@@ -1,0 +1,4 @@
+# vscode settings
+$HOME/Library/Application Support/Code/User/settings.json
+# vscode packages?
+# sublime settings, packages?
