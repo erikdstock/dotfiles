@@ -61,9 +61,11 @@ alias ls='ls -Gh'
 export GREP_OPTIONS='--color=auto'
 
 
-# Set sublime or atom as the default editor also set in aliases
-which -s subl && export EDITOR="subl --wait"
-# which -s atom && export EDITOR="atom -nw"
+# Set vscode or sublime or atom as the default editor also set in aliases
+which -s code && export EDITOR="code --wait"
+# || which -s subl && export EDITOR="subl --wait" \
+# || echo 'no $EDITOR set: $EDITOR'
+# which -s atom && export EDITOR="atom -nw" # nah
 
 # Load .profile, the system-wide initialization script (watch for redundancies)
 source ~/.profile
