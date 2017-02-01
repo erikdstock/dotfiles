@@ -20,6 +20,12 @@ test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PAT
 # Path for Heroku
 test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
 
+# No longer needed per brew
+# export PATH=/usr/local/share/python:$PATH
+
+#recommended after install of Go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
 # Composer path
 export PATH=$PATH:~/.composer/vendor/bin
 
