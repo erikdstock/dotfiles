@@ -1,3 +1,6 @@
+# The only working script right now- everything as adapted before.
+main:
+	source ~/dotfiles/make.sh
 dotfiles:
 	echo "make dotfiles- todo"
 
