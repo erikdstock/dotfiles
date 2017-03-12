@@ -41,6 +41,8 @@ test -s $git_completion_script && source $git_completion_script
 
 # Load aliases
 source $HOME/dotfiles/scripts/aliases.sh
+# Load gitignored secrets
+[ -e $HOME/dotfiles/scripts/secrets.sh ] && source $HOME/dotfiles/scripts/secrets.sh
 
 
 ### These prompts may be mutually exclusive so pick one
