@@ -91,3 +91,4 @@ Temporary Items
 .*.sw?
 
 npm-debug.log
+.idea/
