@@ -2,3 +2,4 @@ app-lists/*
 .DS-Store
 powerline-shell/
 scripts/secrets.sh
+.vs-code/
