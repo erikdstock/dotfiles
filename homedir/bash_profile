@@ -39,8 +39,10 @@ test -s $git_completion_script && source $git_completion_script
 # Load dose mbp-specific configuration (also possibly in .profile below)
 [ -e $HOME/dotfiles/scripts/dose.sh ] && source $HOME/dotfiles/scripts/dose.sh
 
-# Load aliases
+# Load aliases and helpers
 source $HOME/dotfiles/scripts/aliases.sh
+source $HOME/dotfiles/scripts/helpers.sh
+
 # Load gitignored secrets
 [ -e $HOME/dotfiles/scripts/secrets.sh ] && source $HOME/dotfiles/scripts/secrets.sh
 
