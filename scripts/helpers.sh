@@ -23,3 +23,16 @@ loadenv () {
   fi
   return 0
 }
+
+git-pending () {
+    if [ "$1" ]; then
+        cmd = "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative $1"
+        echo $cmd
+        eval $cmd
+    else
+        echo "need branch to compate like 'upstream/master..upstream/release'"
+        return 1
+    fi
+    return 0
+}
+
