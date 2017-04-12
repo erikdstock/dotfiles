@@ -30,7 +30,7 @@ git-pending () {
         echo $cmd
         eval $cmd
     else
-        echo "need branch to compate like 'upstream/master..upstream/release'"
+        echo "need branch to compare like 'upstream/release..artsy/master'"
         return 1
     fi
     return 0
