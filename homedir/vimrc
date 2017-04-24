@@ -1,4 +1,5 @@
 " ######### VUNDLE CONFIG
+" ----------------------------------------------------------------------------
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -29,17 +30,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
 Plugin 'scrooloose/nerdtree'  " file tree
-autocmd vimenter * NERDTree   " autoload
-map <C-n> :NERDTreeToggle<CR> " toggle with Ctrl+n
-
 Plugin 'airblade/vim-gitgutter'
-
 Plugin 'flazz/vim-colorschemes'
-" colorscheme molokai
-
 Plugin 'ctrlpvim/ctrlp.vim' " fuzzy finder
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,7 +50,8 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 "
-" ##### END OF VUNDLE
+" END OF VUNDLE
+" --------------------------------------------------------------------------------
 
 " ##### Start of damassi's recommended defaults
 filetype plugin indent on          " filetype detection and settings
@@ -72,7 +66,48 @@ set ruler                          " shows line number in the status line
 set switchbuf=useopen,usetab       " better behavior for the quickfix window and :sb
 set tags=./tags;/,tags;/           " search tags files efficiently
 set wildmenu                       " better command line completion, shows a list of matches
+set number                         " regular line numbers
 nnoremap gb :buffers<CR>:sb<Space> " quick buffer navigation
 " ##### End
 
+" Auto indent for yml files
+"---------------------------------------------------------------
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 
+
+" NERDTree configuration
+" --------------------------------------------------------------------------------------------
+   autocmd VimEnter * NERDTree           " open nerdtree by default
+   let NERDTreeShowHidden = 1            " show hidden files by default
+   let NERDTreeMinimalUI = 1             " only relevant parts
+   let NERDTreeDirArrows = 1             " add arrows
+   let NERDTreeIgnore = ['\.DS_Store\|\.sass-cache']   " ignore certain files and patterns
+   autocmd VimEnter * wincmd p           " start cursor on file pane
+
+" FuzzyFinder (CtrlP) Settings
+" --------------------------------------------------------------------------------------------
+  let g:ctrlp_cmd = 'CtrlP'
+  let g:ctrlp_map = '<c-p>'
+  let g:ctrlp_custom_ignore = {
+\ 'dir' : '\.sass-cache$\|bower_components$\|node_modules$\|\.git$\|tmp$\|\.svn$\|\.sass-cache$\|public/compiled$\|vendor/gems$',
+\ 'file': '\.git$\|\.hg$\|\.svn$\|\.scssc$'
+\ }
+
+
+" Change cursor shape between insert and normal mode in iTerm2.app
+" ------------------------------------------------------------------------------------------
+if $TERM_PROGRAM =~ "iTerm"
+   let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+   let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+endif
+
+" Powerline setup ------------------------------------------------------------
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+
+" Always show statusline
+" set laststatus=2
+"
+" " Use 256 colours (Use this setting only if your terminal supports 256
+" colours)
+" set t_Co=256
