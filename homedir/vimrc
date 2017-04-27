@@ -67,11 +67,12 @@ set switchbuf=useopen,usetab       " better behavior for the quickfix window and
 set tags=./tags;/,tags;/           " search tags files efficiently
 set wildmenu                       " better command line completion, shows a list of matches
 set number                         " regular line numbers
+set noswapfile                     " don't create swapfiles
 nnoremap gb :buffers<CR>:sb<Space> " quick buffer navigation
 " ##### End
 
 " Auto indent for yml files
-"---------------------------------------------------------------
+" --------------------------------------------------------------
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 
@@ -79,6 +80,7 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 " NERDTree configuration
 " --------------------------------------------------------------------------------------------
    autocmd VimEnter * NERDTree           " open nerdtree by default
+   map <C-n> :NERDTreeToggle<CR>          " toggle nerd tree
    let NERDTreeShowHidden = 1            " show hidden files by default
    let NERDTreeMinimalUI = 1             " only relevant parts
    let NERDTreeDirArrows = 1             " add arrows
