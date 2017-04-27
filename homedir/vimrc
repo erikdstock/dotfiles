@@ -53,7 +53,7 @@ filetype plugin indent on    " required
 " END OF VUNDLE
 " --------------------------------------------------------------------------------
 
-" ##### Start of damassi's recommended defaults
+" ##### Start of Vim settings 
 filetype plugin indent on          " filetype detection and settings
 syntax on                          " syntax highlighting
 silent! runtime macros/matchit.vim " matchit comes with Vim
@@ -67,6 +67,12 @@ set switchbuf=useopen,usetab       " better behavior for the quickfix window and
 set tags=./tags;/,tags;/           " search tags files efficiently
 set wildmenu                       " better command line completion, shows a list of matches
 set number                         " regular line numbers
+
+set autoindent                     " copy indentation of line above
+set expandtab                      " Indent with 2 spaces- see
+set shiftwidth=2                   " http://vim.wikia.com/wiki/Indenting_source_code
+set softtabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 " example custom config
 nnoremap gb :buffers<CR>:sb<Space> " quick buffer navigation
 " ##### End
 
