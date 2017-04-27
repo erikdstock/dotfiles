@@ -8,3 +8,5 @@ alias gitroot="cd \$(git rev-parse --show-toplevel)"
 alias denv="eval \$(docker-machine env)"
 # MBA Structure
 alias godev="cd ~/dev"
+alias godot="cd ~/dotfiles"
+
