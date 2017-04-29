@@ -69,6 +69,8 @@ set wildmenu                       " better command line completion, shows a lis
 set number                         " regular line numbers
 set noswapfile                     " don't create swapfiles
 
+colorscheme molokai
+
 set autoindent                     " copy indentation of line above
 set expandtab                      " Indent with 2 spaces- see
 set shiftwidth=2                   " http://vim.wikia.com/wiki/Indenting_source_code
