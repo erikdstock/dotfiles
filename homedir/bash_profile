@@ -57,8 +57,6 @@ source $HOME/dotfiles/scripts/helpers.sh
 
 # Powerline-shell- see .profile
 
-
-
 ### End prompts ###
 
 # Colors ls should use for folders, files, symlinks etc, see `man ls` and
@@ -67,16 +65,23 @@ export LSCOLORS=ExGxFxdxCxDxDxaccxaeex
 # Force ls to use colors (G) and use humanized file sizes (h)
 alias ls='ls -Gh'
 
-# Force grep to always use the color option and show line numbers ... changing this to auto to make a nokogiri gem install
+# Force grep to always use the color option and show line numbers ...
+# changing this to auto to make a nokogiri gem install
 export GREP_OPTIONS='--color=auto'
 
+# ----------- Text Editor -----------------------------------------------------
+# Set vim or vscode or sublime or atom as the default editor also set in aliases
+# Set EDITOR AND VISUAL to same.
+# see http://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits
+export VISUAL=vim
+# which -s code && export VISUAL="code --wait"
+# which -s subl && export VISUAL="subl --wait"
+# echo 'no $VISUAL set: $VISUAL'
+# which -s atom && export VISUAL="atom -nw" # nah
+export EDITOR="$VISUAL"
 
-# Set vscode or sublime or atom as the default editor also set in aliases
-# which -s code && export EDITOR="code --wait"
-which -s subl && export EDITOR="subl --wait"
-# echo 'no $EDITOR set: $EDITOR'
-# which -s atom && export EDITOR="atom -nw" # nah
 
+# ----------- Boilerplate -----------------------------------------------------
 # Load .profile, the system-wide initialization script (watch for redundancies)
 source ~/.profile
 
@@ -85,7 +90,7 @@ echo "*look into refining your PATH & order someday*"
 export NVM_DIR="/Users/eriks/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-
+# ----------- Things to clean up ----------------------------------------------
 # ### Add cwd to iterm tabs
 # Add command to PROMPT_COMMAND (runs before each command)
 # Makes sure ithe command is not already in PROMPT_COMMAND
