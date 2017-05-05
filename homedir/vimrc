@@ -70,6 +70,7 @@ set number                         " regular line numbers
 set noswapfile                     " don't create swapfiles
 
 colorscheme molokai
+set colorcolumn=80                 " color the 80th line so you don't type too much
 
 set autoindent                     " copy indentation of line above
 set expandtab                      " Indent with 2 spaces- see
