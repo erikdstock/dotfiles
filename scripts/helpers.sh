@@ -36,3 +36,30 @@ git-pending () {
     return 0
 }
 
+artsy-pending () {
+  git fetch artsy
+  echo "*** artsy/release recent commits: ***"
+  git log artsy/release --abbrev-commit --pretty=oneline -n 4
+  echo "-------------"
+  echo "*** Pending in artsy/master: ***"
+  git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative artsy/release..artsy/master
+}
+
+
+#gho () {
+#  # are we in a git repo?
+#  git rev-parse --is-inside-work-tree &>/dev/null
+#
+#  if [[ $? != 0 ]]; then
+#    echo "Not a git repository." 1>&2
+#    exit 1
+#  fi
+#
+#  branch=${git symbolic-ref -q --short HEAD}
+#
+#  if [ "$1" ]; then
+#    if [ "$2" ]; then
+#
+#    fi
+#  fi
+#}
