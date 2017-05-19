@@ -11,7 +11,7 @@ Better yet, read over what that will do and tweak it to not screw your system up
 * `/app-list/` : folder with brews, casks and whatnot. This needs to be refined and isn't doing much useful right now.
 * `/homedir/` : location of all loading scripts (`.bash_profile`, `.vimrc` etc) to be symlinked to `$HOME`
 * `/powerline-shell/` : location of powerline-shell. might need to be removed/updated... I don't set up new computers very often.
-
+* `/scripts/` : simple bash helper functions, aliases and more.
 
 ## Disabling key repeats for different text editors in osx
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
