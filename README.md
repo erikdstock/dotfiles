@@ -1,3 +1,7 @@
+My settings, mostly focused on simple bash and vim defaults.
+Fork and clone to your home directory, then run `make`.
+Better yet, read over what that will do and tweak it to not screw your system up. Many defaults in homedir/bash_profile can be toggled by commenting/uncommenting lines.
+
 
 ## organization
 * `/Makefile` : Defines top-level tasks. Use `make` to run install.sh
@@ -24,6 +28,8 @@ defaults write com.github.atom ApplePressAndHoldEnabled -bool false
 * screenshot save location (not really dotfiles but)
 * remove/update docker helper stuff
 * Check that nvm install at end of bash_profile is correct- ie it will work before nvm is installed?
+* Handle setting up Vundler and vim installs
+* Remove OS-specific dependencies (brew etc)
 
 ### Credits
 * @awproksel wrote the [docker_helpers](https://www.github.com/awproksel/docker_helper)
