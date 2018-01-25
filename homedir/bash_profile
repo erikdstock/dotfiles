@@ -22,12 +22,11 @@ test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
 
 # No longer needed per brew
 # export PATH=/usr/local/share/python:$PATH
+# Path to custom version of postgres:
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
 #recommended after install of Go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-# Composer path
-export PATH=$PATH:~/.composer/vendor/bin
 
 # Load git completions installed via brew
 git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
