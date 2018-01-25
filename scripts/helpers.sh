@@ -36,6 +36,19 @@ git-pending () {
     return 0
 }
 
+git-replace () {
+  if [ "$1" ]; then
+    if [ "$1" == master ]; then echo "not master." && return 1; fi
+    cmd="git checkout master && git fetch && git branch -D $1 && git checkout $1"
+    echo $cmd
+    eval $cmd
+  else
+    echo "need branch to replace"
+  fi
+  return 0
+}
+
+
 artsy-pending () {
   git fetch artsy
   echo "*** artsy/release recent commits: ***"
