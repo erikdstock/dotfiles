@@ -48,6 +48,15 @@ git-replace () {
   return 0
 }
 
+git-cb () {
+  old="$IFS"
+  IFS='-'
+  branch_name="'$*'"
+  IFS=$old
+  echo "Checking out $branch_name"
+  git checkout -b $branch_name
+}
+
 
 artsy-pending () {
   git fetch artsy
