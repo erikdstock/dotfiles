@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Erik Stockmeier
+	email = erik@artsymail.com
+	name = eriks
+[core]
+	excludesfile = ~/.gitignore_global
+[alias]
+    st = status
+    co = checkout
+[credential]
+	helper = osxkeychain
