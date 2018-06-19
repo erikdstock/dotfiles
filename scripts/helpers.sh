@@ -67,6 +67,32 @@ artsy-pending () {
   git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative artsy/release..artsy/master
 }
 
+xc () {
+  # If an arg was provided
+  if [ $1 ]; then
+    # If it is the begining of a local .xcworkspace directory
+    if [ -d "$1.xcworkspace" ]; then
+      cmd="$1.xcworkspace"
+    else
+      echo "$1.xcworkspace not found"
+      return 1
+    fi
+  else
+    # Find all workspaces in dir
+    workspaces=$(ls | grep "\.xcworkspace$")
+    echo "Found ${workspaces}"
+    # If there is only one, use it
+    if [ ${#workspaces[@]} -eq "1" ]; then
+      cmd=${workspaces[0]}
+    else
+      echo "need basename of .xcworkspace (or exactly 1 xcworkspace in dir)"
+      return 2
+    fi
+  fi
+  echo "Opening $cmd"
+  eval "open $cmd"
+  return 0
+}
 
 #gho () {
 #  # are we in a git repo?
