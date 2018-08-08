@@ -4,11 +4,6 @@ echo "Loading ~/.bash_profile"
 echo "Logged in as $USER at $(hostname)"
 # echo $PATH # for debugging path order later TODO
 
-# Rbenv autocomplete and shims (which means rvm shouldn't be)
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-# Path for RBENV
-test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
-
 # Path changes are made non-destructive with PATH=new_path;$PATH   This is like A=A+B so we preserve the old path
 # Path order matters, putting /usr/local/bin: before $PATH
 # ensures brew programs will be seen and used before another program
@@ -86,8 +81,18 @@ source ~/.profile
 
 echo "*look into refining your PATH & order someday*"
 
+# Rbenv autocomplete and shims (which means rvm shouldn't be installed)
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# Path for RBENV
+test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
+
+# NVM
 export NVM_DIR="/Users/eriks/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# PyEnv
+if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
+
 
 # ----------- Things to clean up ----------------------------------------------
 # ### Add cwd to iterm tabs
