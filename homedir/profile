@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 function _update_ps1() {
-    PS1="$(~/dotfiles/powerline-shell/powerline-shell.py $? 2> /dev/null)"
+    PS1="$(~/dotfiles/powerline-shell/powerline-shell.py --cwd-max-depth=3 --cwd-max-dir-size=10 $? 2> /dev/null)"
 }
 
 if [ "$TERM" != "linux" ]; then
