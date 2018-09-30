@@ -18,13 +18,25 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 defaults write com.github.atom ApplePressAndHoldEnabled -bool false
 
-### TODOS
-* powerline-shell doesn't work immediately
-	* python might need to be installed via brew (for pip?)
-	* powerline might need to be installed via pip
-	* actually, powerline needs to be cloned from git repo *
-	* test for powerline shell folder doesn't work bc the repo already has empty folder.
-* need dependencies list?
+### Followups (9/30/18 - Mojave clean install):
+- Began with https://github.com/MikeMcQuaid/strap
+- Then cloning this repo and `brew bundle Brewfile` including some assumptions:
+	- java8 and java (latest) both required? i suppose... :/
+	- install & manage python via pyenv
+	- powerline-friendly fonts are installed from brew and set them in terminal preferences
+- `pip install -r ./requirements.txt` -> install [powerline-shell](https://github.com/b-ryan/powerline-shell#config-file)
+- nvm did not install correctly, had to do it manually
+- Backblaze required followup from looking at `brew info backblaze` (to run the installer)
+- Installed yarn following website directions: `brew install yarn --without-node` (as of now)
+- [Set up vundler](https://github.com/VundleVim/Vundle.vim)
+- Don't forget secrets
+
+### Later reference
+- Mongodb repair like here- may need to `brew info <mongopackage>` to find location of mongod executable https://docs.mongodb.com/manual/tutorial/recover-data-following-unexpected-shutdown/
+- [dblock's article about mongo speed in testing](https://docs.mongodb.com/manual/tutorial/recover-data-following-unexpected-shutdown/) (affects steps for mongodb recovery/repair too)
+
+
+### Earlier followups
 * screenshot save location (not really dotfiles but)
 * remove/update docker helper stuff
 * Check that nvm install at end of bash_profile is correct- ie it will work before nvm is installed?

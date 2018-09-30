@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
+
 function _update_ps1() {
-    PS1="$(~/dotfiles/powerline-shell/powerline-shell.py --cwd-max-depth=3 --cwd-max-dir-size=10 $? 2> /dev/null)"
+  if type "powerline-shell" &> /dev/null; then
+    PS1=$(powerline-shell $?)
+  fi
 }
 
 if [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 fi

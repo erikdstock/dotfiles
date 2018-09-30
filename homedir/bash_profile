@@ -27,12 +27,6 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
 test -s $git_completion_script && source $git_completion_script
 
-# Load docker_helper if it is in ~dotfiles/scripts/
-[ -e $HOME/dotfiles/scripts/docker_helper.sh ] && source $HOME/dotfiles/scripts/docker_helper.sh
-
-# Load dose mbp-specific configuration (also possibly in .profile below)
-[ -e $HOME/dotfiles/scripts/dose.sh ] && source $HOME/dotfiles/scripts/dose.sh
-
 # Load aliases and helpers
 source $HOME/dotfiles/scripts/aliases.sh
 source $HOME/dotfiles/scripts/helpers.sh
@@ -89,6 +83,7 @@ test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
 # NVM
 export NVM_DIR="/Users/eriks/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # PyEnv
 if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi

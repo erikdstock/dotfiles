@@ -78,6 +78,7 @@ set shiftwidth=2                   " http://vim.wikia.com/wiki/Indenting_source_
 set softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 " example custom config
 nnoremap gb :buffers<CR>:sb<Space> " quick buffer navigation
+imap jk <Esc>
 " ##### End
 
 " Auto indent for yml files
