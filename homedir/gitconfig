@@ -3,11 +3,16 @@
 # Please adapt and uncomment the following lines:
 #	name = Erik Stockmeier
 	email = erik@artsymail.com
-	name = eriks
+	name = ErikS
 [core]
 	excludesfile = ~/.gitignore_global
 [alias]
-    st = status
-    co = checkout
+	st = status
+	co = checkout
+	please = push --force-with-lease
+	commend = commit --amend --no-edit
+	it = !git init && git commit -m \"Initial commit.\" --allow-empty
+	s = status --short --branch
+	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
 [credential]
 	helper = osxkeychain

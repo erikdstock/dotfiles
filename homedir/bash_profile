@@ -30,6 +30,7 @@ test -s $git_completion_script && source $git_completion_script
 # Load aliases and helpers
 source $HOME/dotfiles/scripts/aliases.sh
 source $HOME/dotfiles/scripts/helpers.sh
+source $HOME/dotfiles/scripts/git-config.sh
 
 # Load gitignored secrets
 [ -e $HOME/dotfiles/scripts/secrets.sh ] && source $HOME/dotfiles/scripts/secrets.sh
