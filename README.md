@@ -25,7 +25,7 @@ Better yet, read over what that will do and tweak it to not screw your system up
 - Don't forget secrets.sh if you have them. They might look like this:
 
 ```sh
-!/usr/bin/env bash
+#!/usr/bin/env bash
 echo "loading secrets"
 export AWS_ACCESS_KEY_ID=abc123
 export PASSWORD=password123!
