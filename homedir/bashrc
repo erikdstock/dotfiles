@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+echo "Loading .bashrc"
+# bash_profile/bashrc setup from http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
+
+# Path for brew
+test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+# Path for Heroku
+test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
+
+# Path to custom version of postgres:
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+
+#recommended after install of Go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin

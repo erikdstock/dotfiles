@@ -2,51 +2,14 @@
 
 echo "Loading ~/.bash_profile"
 echo "Logged in as $USER at $(hostname)"
-# echo $PATH # for debugging path order later TODO
-
-# Path changes are made non-destructive with PATH=new_path;$PATH   This is like A=A+B so we preserve the old path
-# Path order matters, putting /usr/local/bin: before $PATH
-# ensures brew programs will be seen and used before another program
-# of the same name is called
-#
-
-# Path for brew
-test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-# Path for Heroku
-test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
-
-# No longer needed per brew
-# export PATH=/usr/local/share/python:$PATH
-# Path to custom version of postgres:
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-
-#recommended after install of Go
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
-# Load git completions installed via brew
-git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
-test -s $git_completion_script && source $git_completion_script
-
-# Load aliases and helpers
-source $HOME/dotfiles/scripts/aliases.sh
-source $HOME/dotfiles/scripts/helpers.sh
-# source $HOME/dotfiles/scripts/git-config.sh # gitconfig already sets these, no need to re-run
-
-# Load gitignored secrets
-[ -e $HOME/dotfiles/scripts/secrets.sh ] && source $HOME/dotfiles/scripts/secrets.sh
 
 
-### These prompts may be mutually exclusive so pick one
-# Load DBC-style git prompt
-# [ -e $HOME/dotfiles/scripts/git_prompt.sh ] && source $HOME/dotfiles/scripts/git_prompt.sh
+# bash_profile/bashrc setup from http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
+# (PATH setup goes here)
+if [ -e ~/.bashrc ]; then
+  source ~/.bashrc
+fi
 
-# # iterm2 shell integration
-# # https://iterm2.com/documentation-shell-integration.html
-# test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
-
-# Powerline-shell- see .profile
-
-### End prompts ###
 
 # Colors ls should use for folders, files, symlinks etc, see `man ls` and
 # search for LSCOLORS
@@ -55,8 +18,8 @@ export LSCOLORS=ExGxFxdxCxDxDxaccxaeex
 alias ls='ls -Gh'
 
 # Force grep to always use the color option and show line numbers ...
-# changing this to auto to make a nokogiri gem install
 export GREP_OPTIONS='--color=auto'
+
 
 # ----------- Text Editor -----------------------------------------------------
 # Set vim or vscode or sublime or atom as the default editor also set in aliases
@@ -64,17 +27,12 @@ export GREP_OPTIONS='--color=auto'
 # see http://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits
 export VISUAL=vim
 # which -s code && export VISUAL="code --wait"
-# which -s subl && export VISUAL="subl --wait"
-# echo 'no $VISUAL set: $VISUAL'
-# which -s atom && export VISUAL="atom -nw" # nah
 export EDITOR="$VISUAL"
 
-
-# ----------- Boilerplate -----------------------------------------------------
-# Load .profile, the system-wide initialization script (watch for redundancies)
-source ~/.profile
-
-echo "*look into refining your PATH & order someday*"
+# ---------- DX & Version managers -------------------------------------------
+# Load git completions installed via brew
+git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
+test -s $git_completion_script && source $git_completion_script
 
 # Rbenv autocomplete and shims (which means rvm shouldn't be installed)
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -90,35 +48,15 @@ export NVM_DIR="$HOME/.nvm"
 if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+### Mutally-exclusive prompt commands
+# Powerline Shell & term tabs
+[ -e $HOME/dotfiles/scripts/prompt_commands.sh ] && source $HOME/dotfiles/scripts/prompt_commands.sh
+# DBC-style git prompt
+# [ -e $HOME/dotfiles/scripts/git_prompt.sh ] && source $HOME/dotfiles/scripts/git_prompt.sh
 
-# ----------- Things to clean up ----------------------------------------------
-# ### Add cwd to iterm tabs
-# Add command to PROMPT_COMMAND (runs before each command)
-# Makes sure ithe command is not already in PROMPT_COMMAND
+# Load aliases and helpers
+[ -e $HOME/dotfiles/scripts/aliases.sh ] && source $HOME/dotfiles/scripts/aliases.sh
+[ -e $HOME/dotfiles/scripts/helpers.sh ] && source $HOME/dotfiles/scripts/helpers.sh
+# Load gitignored secrets
+[ -e $HOME/dotfiles/scripts/secrets.sh ] && source $HOME/dotfiles/scripts/secrets.sh
 
-# addToPromptCommand() {
-#   if [[ ":$PROMPT_COMMAND:" != *":$1:"* ]]; then
-#     export PROMPT_COMMAND="${PROMPT_COMMAND:+"$PROMPT_COMMAND:"} $1"
-#   fi
-# }
-
-# # Set iTerm title to show current directory
-# if [ $ITERM_SESSION_ID ]; then
-#   addToPromptCommand 'echo -ne "\033];${PWD##*/}\007" '
-# fi
-
-# # Piece-by-Piece Explanation:
-# # the if condition makes sure we only screw with $PROMPT_COMMAND if we're in an iTerm environment
-# # iTerm happens to give each session a unique $ITERM_SESSION_ID we can use, $ITERM_PROFILE is an option too
-# # the $PROMPT_COMMAND environment variable is executed every time a command is run
-# # see: ss64.com/bash/syntax-prompt.html
-# # we want to update the iTerm tab title to reflect the current directory (not full path, which is too long)
-# # echo -ne "\033;foo\007" sets the current tab title to "foo"
-# # see: stackoverflow.com/questions/8823103/how-does-this-script-for-naming-iterm-tabs-work
-# # the two flags, -n = no trailing newline & -e = interpret backslashed characters, e.g. \033 is ESC, \007 is BEL
-# # see: ss64.com/bash/echo.html for echo documentation
-# # we set the title to ${PWD##*/} which is just the current dir, not full path
-# # see: stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-bash-script
-# # then we append the rest of $PROMPT_COMMAND so as not to remove what was already there
-# # voilà!
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
