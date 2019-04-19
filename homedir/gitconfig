@@ -2,8 +2,8 @@
 [user]
 # Please adapt and uncomment the following lines:
 #	name = Erik Stockmeier
-	email = erik@artsymail.com
-	name = ErikS
+	email = erik.d.stock@gmail.com
+	name = Erik Stockmeier
 [core]
 	excludesfile = ~/.gitignore_global
 [alias]

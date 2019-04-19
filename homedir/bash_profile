@@ -30,7 +30,7 @@ test -s $git_completion_script && source $git_completion_script
 # Load aliases and helpers
 source $HOME/dotfiles/scripts/aliases.sh
 source $HOME/dotfiles/scripts/helpers.sh
-source $HOME/dotfiles/scripts/git-config.sh
+# source $HOME/dotfiles/scripts/git-config.sh # gitconfig already sets these, no need to re-run
 
 # Load gitignored secrets
 [ -e $HOME/dotfiles/scripts/secrets.sh ] && source $HOME/dotfiles/scripts/secrets.sh
@@ -121,3 +121,4 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 # # see: stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-bash-script
 # # then we append the rest of $PROMPT_COMMAND so as not to remove what was already there
 # # voilà!
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
