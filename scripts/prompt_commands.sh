@@ -16,9 +16,8 @@ _get_iterm_label() {
     local branch
     local branchdir
     branchdir=$(basename "$(git rev-parse --show-toplevel)")
-    command=trap $(history 1 | sed "s/^[ ]*[0-9]*[ ]*//g")
     # branch=$(git branch 2>/dev/null | grep -e '\* ' | sed "s/^..\(.*\)/{\1}/")
-    echo -ne "\\033];$branchdir $command\\007"
+    echo -ne "\\033];$branchdir\\007"
   fi
 }
 
