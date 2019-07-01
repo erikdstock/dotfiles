@@ -65,5 +65,5 @@ if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -
 [ -e $HOME/dotfiles/scripts/aliases.sh ] && source $HOME/dotfiles/scripts/aliases.sh
 [ -e $HOME/dotfiles/scripts/helpers.sh ] && source $HOME/dotfiles/scripts/helpers.sh
 # Load gitignored secrets
-[ -e $HOME/dev/keys/secrets.sh ] && source $HOME/dev/keys/secrets.sh
+[ -e $HOME/.keys/.env.sh ] && source $HOME/.keys/.env.sh
 
