@@ -33,10 +33,11 @@ alias generate-secret-token='curl "https://mytokenapi.com?access-key=$PASSWORD"'
 ```
 
 ### Disabling key repeats for different text editors in osx
-defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+```
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false  
+defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false  
 defaults write com.github.atom ApplePressAndHoldEnabled -bool false
-
+```
 ### Screenshot save location
 defaults write com.apple.screencapture location /path/; killall SystemUIServer
 

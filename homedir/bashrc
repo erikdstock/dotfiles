@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 echo "Loading ~/.bashrc"
-[ -e $HOME/dotfiles/scripts/prompt_commands.sh ] && source $HOME/dotfiles/scripts/prompt_commands.sh
+[ -e $HOME/.dotfiles/scripts/prompt_commands.sh ] && source $HOME/.dotfiles/scripts/prompt_commands.sh
 
 # TODO: Ignoring advice of bash_profile/bashrc setup from http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
-

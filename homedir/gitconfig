@@ -17,3 +17,5 @@
 	plog = log --pretty=oneline --abbrev-commit
 [credential]
 	helper = osxkeychain
+[hub]
+	protocol = https
