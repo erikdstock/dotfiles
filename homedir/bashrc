@@ -1,5 +1,74 @@
 #!/usr/bin/env bash
+#  http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
+
 echo "Loading ~/.bashrc"
 [ -e $HOME/.dotfiles/scripts/prompt_commands.sh ] && source $HOME/.dotfiles/scripts/prompt_commands.sh
 
-# TODO: Ignoring advice of bash_profile/bashrc setup from http://www.joshstaiger.org/archives/2005/07/bash_profile_vs.html
+# PATH Setup
+
+# Path for brew
+test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+# Path for Heroku
+test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
+
+# Path to custom version of postgres:
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+
+#recommended after install of Go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# Location of this directory
+DOTFILES_PATH="$HOME/.dotfiles"
+
+
+# Colors ls should use for folders, files, symlinks etc, see `man ls` and
+# search for LSCOLORS
+export LSCOLORS=ExGxFxdxCxDxDxaccxaeex
+# Force ls to use colors (G) and use humanized file sizes (h)
+alias ls='ls -Gh'
+
+# Force grep to always use the color option and show line numbers ...
+export GREP_OPTIONS='--color=auto'
+
+
+# ----------- Text Editor -----------------------------------------------------
+# Set vim or vscode or sublime or atom as the default editor also set in aliases
+# Set EDITOR AND VISUAL to same.
+# see http://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits
+export VISUAL=vim
+# which -s code && export VISUAL="code --wait"
+export EDITOR="$VISUAL"
+
+# ---------- DX & Version managers -------------------------------------------
+# Load git completions installed via brew
+git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
+test -s $git_completion_script && source $git_completion_script
+
+# Rbenv autocomplete and shims (which means rvm shouldn't be installed)
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# Path for RBENV
+test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# PyEnv
+if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+### Mutally-exclusive prompt commands
+# Powerline Shell & term tabs
+# [ -e $DOTFILES_PATH/scripts/prompt_commands.sh ] && source $DOTFILES_PATH/scripts/prompt_commands.sh
+# DBC-style git prompt
+[ -e $DOTFILES_PATH/scripts/git_prompt.sh ] && source $DOTFILES_PATH/scripts/git_prompt.sh
+
+# Load aliases and helpers
+[ -e $DOTFILES_PATH/scripts/aliases.sh ] && source $DOTFILES_PATH/scripts/aliases.sh
+[ -e $DOTFILES_PATH/scripts/helpers.sh ] && source $DOTFILES_PATH/scripts/helpers.sh
+# Load gitignored secrets
+[ -e $HOME/.keys/.env.sh ] && source $HOME/.keys/.env.sh
+
+
+

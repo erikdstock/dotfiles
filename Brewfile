@@ -39,6 +39,7 @@ cask 'font-monoid'
 brew 'heroku'
 brew 'watchman'
 brew 'exercism'
+brew 'the_silver_searcher'
 
 # Apps
 cask '1Password'
@@ -63,6 +64,7 @@ cask 'docker'
 cask 'gifox'
 cask 'intellij-idea-ce'
 cask 'iterm2'
+cask 'rowanj-gitx'
 
 cask 'keybase'
 cask 'whatsapp'
