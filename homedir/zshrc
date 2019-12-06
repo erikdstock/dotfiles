@@ -3,6 +3,15 @@
 echo "TODO: check what needs copying over from bashrc"
 ## THEN re-run the install script here to re-link this file back to ~/
 
+DOTFILES_PATH="$HOME/.dotfiles"
+
+# Load aliases and helpers
+[ -e $DOTFILES_PATH/scripts/aliases.sh ] && source $DOTFILES_PATH/scripts/aliases.sh
+[ -e $DOTFILES_PATH/scripts/helpers.sh ] && source $DOTFILES_PATH/scripts/helpers.sh
+[ -e $HOME/.keys/.env.sh ]               && source $HOME/.keys/.env.sh
+
+### BEGIN OH-MY-ZSH CONFIG ###
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
