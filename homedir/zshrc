@@ -82,7 +82,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git ruby nvm rbenv)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby nvm rbenv)
+plugins=(git ruby nvm rbenv pyenv)
 
 [[ -e $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 
