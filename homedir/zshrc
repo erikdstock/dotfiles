@@ -8,6 +8,7 @@ DOTFILES_PATH="$HOME/.dotfiles"
 # Load aliases and helpers
 [ -e $DOTFILES_PATH/scripts/aliases.sh ] && source $DOTFILES_PATH/scripts/aliases.sh
 [ -e $DOTFILES_PATH/scripts/helpers.sh ] && source $DOTFILES_PATH/scripts/helpers.sh
+[ -e $DOTFILES_PATH/scripts/path.sh ] && source $DOTFILES_PATH/scripts/path.sh
 [ -e $HOME/.keys/.env.sh ]               && source $HOME/.keys/.env.sh
 
 ### BEGIN OH-MY-ZSH CONFIG ###
