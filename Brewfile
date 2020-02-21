@@ -26,13 +26,15 @@ brew 'readline'
 brew 'xz'
 
 brew 'scala'
-brew 'pyenv'
+brew 'asdf'
+## All replaced by asdf
+# brew 'pyenv'
 # brew "nvm" # install manually
-brew 'rbenv'
+# brew 'rbenv'
 
 tap 'caskroom/fonts'
 cask 'font-fira-code'
-cask 'font-fira-mono-for-powerline'
+# cask 'font-fira-mono-for-powerline'
 cask 'font-monoid'
 
 # general tools

@@ -1,6 +1,5 @@
 ## Install oh-my-zsh: https://ohmyz.sh/
 ##  OR (as of 12/2019): sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo "TODO: check what needs copying over from bashrc"
 ## THEN re-run the install script here to re-link this file back to ~/
 
 DOTFILES_PATH="$HOME/.dotfiles"
@@ -83,7 +82,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git ruby nvm rbenv)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby nvm rbenv pyenv asdf kube-ps1 xcode)
+plugins=(git asdf kube-ps1 xcode)
 
 [[ -e $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 
