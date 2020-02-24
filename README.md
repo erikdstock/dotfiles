@@ -16,7 +16,7 @@ Better yet, read over what that will do and tweak it to not screw your system up
 
 - now using [`asdf`](https://asdf-vm.com/) rather than rbenv/nvm/pyenv/etc
 - sometimes after installing a new version binaries are not picked up right away- had to do [`hash -r`](https://unix.stackexchange.com/questions/86012/what-is-the-purpose-of-the-hash-command), `asdf reshim` alone did not fix it.
-- after setting up a new plugin (eg installing asdf-python) commands seem to fail. Make sure there is a default version set like `asdf global pythin 3.8.1`. This caused a nasty bug where I couldn't even open `code`
+- after setting up a new plugin (eg installing asdf-python) commands seem to fail. Make sure there is a default version set like `asdf global python 3.8.1`. This caused a nasty bug where I couldn't even open `code`
 - may need to do [`gem update --system`](https://github.com/asdf-vm/asdf-ruby/issues/129) if you get a can't find bundler error.
 
 ## Followups (9/30/18 - Mojave clean install):

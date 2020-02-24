@@ -1,12 +1,12 @@
 # Probably too specific to install all of this unless you know what you are doing
 cask_args appdir: '/Applications'
 tap 'homebrew/cask'
-tap 'caskroom/versions'
+tap 'homebrew/cask-versions'
 
 brew 'git'
 brew 'bash'
 brew 'zsh'
-brew 'macvim', args: ['--with-override-system-vim']
+brew 'macvim'
 
 cask 'java' unless system '/usr/libexec/java_home --failfast'
 
@@ -27,10 +27,10 @@ brew 'xz'
 
 brew 'scala'
 brew 'asdf'
-## All replaced by asdf
-# brew 'pyenv'
-# brew "nvm" # install manually
-# brew 'rbenv'
+## All replaced by asdf:
+    # brew 'pyenv'
+    # brew "nvm" # install manually
+    # brew 'rbenv'
 
 tap 'caskroom/fonts'
 cask 'font-fira-code'
@@ -38,10 +38,13 @@ cask 'font-fira-code'
 cask 'font-monoid'
 
 # general tools
+tap 'heroku/brew'
 brew 'heroku'
+
 brew 'watchman'
 brew 'exercism'
 brew 'the_silver_searcher'
+brew 'trash'
 
 # Apps
 cask '1Password'
@@ -57,7 +60,7 @@ cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'grandperspective'
 cask 'skype'
-cask 'slack'
+cask 'slack'∏
 cask 'spectacle'
 cask 'spotify'
 
