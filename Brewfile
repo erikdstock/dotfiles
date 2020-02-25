@@ -2,6 +2,8 @@
 cask_args appdir: '/Applications'
 tap 'homebrew/cask'
 tap 'homebrew/cask-versions'
+tap 'heroku/brew'
+tap 'homebrew/cask-fonts'
 
 brew 'git'
 brew 'bash'
@@ -28,49 +30,53 @@ brew 'xz'
 brew 'scala'
 brew 'asdf'
 ## All replaced by asdf:
-    # brew 'pyenv'
-    # brew "nvm" # install manually
-    # brew 'rbenv'
+# brew 'pyenv'
+# brew "nvm" # install manually
+# brew 'rbenv'
 
-tap 'caskroom/fonts'
 cask 'font-fira-code'
 # cask 'font-fira-mono-for-powerline'
 cask 'font-monoid'
 
 # general tools
-tap 'heroku/brew'
 brew 'heroku'
-
+brew 'hub'
 brew 'watchman'
 brew 'exercism'
 brew 'the_silver_searcher'
 brew 'trash'
 
 # Apps
-cask '1Password'
+
+# Must haves
 cask 'bitwarden'
+
+cask '1Password'
+
+# System tools
 cask 'alfred3'
 cask 'appcleaner'
 cask 'backblaze'
 cask 'bartender'
 cask 'bettertouchtool'
-cask 'dropbox'
-cask 'firefox', args: { appdir: '~/Applications' }
-cask 'google-backup-and-sync'
-cask 'google-chrome'
 cask 'grandperspective'
-cask 'skype'
-cask 'slack'∏
 cask 'spectacle'
-cask 'spotify'
-
-cask 'visual-studio-code'
-cask 'docker'
 cask 'gifox'
-cask 'intellij-idea-ce'
-cask 'iterm2'
-cask 'rowanj-gitx'
 
+cask 'dropbox'
+cask 'google-backup-and-sync'
+
+cask 'skype'
+cask 'spotify'
 cask 'keybase'
 cask 'whatsapp'
 cask 'signal'
+
+cask 'iterm2'
+cask 'visual-studio-code'
+cask 'intellij-idea-ce'
+
+cask 'docker'
+cask 'rowanj-gitx'
+cask 'menumeters'
+
