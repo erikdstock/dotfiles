@@ -111,3 +111,4 @@ plugins=(git asdf kube-ps1 xcode)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+

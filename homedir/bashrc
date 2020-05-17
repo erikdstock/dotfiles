@@ -10,15 +10,7 @@ DOTFILES_PATH="$HOME/.dotfiles"
 [ -e $DOTFILES_PATH/scripts/bash_prompt_commands.sh ] && source $DOTFILES_PATH/scripts/bash_prompt_commands.sh
 
 # PATH Setup
-
-# Path for brew
-test -d /usr/local/bin && export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-# Path for Heroku
-test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
-
-# Path to custom version of postgres:
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
-
+[ -e $DOTFILES_PATH/scripts/path.sh ] && source $DOTFILES_PATH/scripts/path.sh
 
 # Colors ls should use for folders, files, symlinks etc, see `man ls` and
 # search for LSCOLORS
