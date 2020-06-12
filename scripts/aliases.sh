@@ -3,11 +3,13 @@
 ###########
 # echo "Sourcing aliases"
 alias be="bundle exec"
-alias berf="bundle exec rubocop -a"
 alias yolo="be rake db:drop && be rake db:create && be rake db:migrate && be rake db:seed"
 alias showpath='echo "${PATH//:/$'"'\n'}\""
 alias gitroot="cd \$(git rev-parse --show-toplevel)"
-alias denv="eval \$(docker-machine env)"
+alias hsr="hokusai staging run --tty"
+alias hpr="hokusai production run --tty"
+alias hdr="hokusai dev run --tty"
+alias bs="brew services"
 
 
 if type trash >> /dev/null; then
