@@ -4,3 +4,5 @@ echo "Loading ~/.bash_profile"
 echo "Logged in as $USER at $(hostname)"
 
 source ~/.bashrc
+
+export PATH="$HOME/.poetry/bin:$PATH"

@@ -57,15 +57,19 @@ git-cb () {
   git checkout -b $branch_name
 }
 
-
-artsy-pending () {
-  git fetch artsy
-  echo "*** artsy/release recent commits: ***"
-  git log artsy/release --abbrev-commit --pretty=oneline -n 4
-  echo "-------------"
-  echo "*** Pending in artsy/master: ***"
-  git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative artsy/release..artsy/master
+# Open the url in the running ios simulator
+function iopen () {
+  xcrun simctl openurl booted $1;
 }
+
+# artsy-pending () {
+#   git fetch artsy
+#   echo "*** artsy/release recent commits: ***"
+#   git log artsy/release --abbrev-commit --pretty=oneline -n 4
+#   echo "-------------"
+#   echo "*** Pending in artsy/master: ***"
+#   git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative artsy/release..artsy/master
+# }
 
 ## Handled by oh-my-zsh now
 # xc () {
