@@ -10,6 +10,7 @@ alias hsr="hokusai staging run --tty"
 alias hpr="hokusai production run --tty"
 alias hdr="hokusai dev run --tty"
 alias bs="brew services"
+alias foam="code '/Users/erikstockmeier/Library/Mobile Documents/com~apple~CloudDocs/Documents/personal/foam'"
 
 
 if type trash >> /dev/null; then
