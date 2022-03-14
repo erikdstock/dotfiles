@@ -10,6 +10,9 @@ DOTFILES_PATH="$HOME/.dotfiles"
 [ -e $DOTFILES_PATH/scripts/path.sh ] && source $DOTFILES_PATH/scripts/path.sh
 [ -e $HOME/.keys/.env.sh ]               && source $HOME/.keys/.env.sh
 
+# Source asdf
+. /usr/local/opt/asdf/libexec/asdf.sh
+
 ### BEGIN OH-MY-ZSH CONFIG ###
 
 # If you come from bash you might have to change your $PATH.
@@ -82,7 +85,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git ruby nvm rbenv)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git asdf kube-ps1 xcode)
+plugins=(git kube-ps1 xcode asdf)
 
 [[ -e $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 

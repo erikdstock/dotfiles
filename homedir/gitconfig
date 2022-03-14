@@ -2,8 +2,8 @@
 [user]
 # Please adapt and uncomment the following lines:
 #	name = Erik Stockmeier
-	email = erik.d.stock@gmail.com
-	name = Erik Stockmeier
+	email = erikdstock@users.noreply.github.com
+	name = Erik
 [core]
 	excludesfile = ~/.gitignore_global
 [alias]
@@ -28,3 +28,8 @@
 	default = simple
 [pull]
 	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
