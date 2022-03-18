@@ -20,3 +20,5 @@ fi
 # Force ls to use colors (G) and use humanized file sizes (h)
 alias ls='ls -Gh'
 alias ll='ls -al'
+
+export GITLAB_EMAIL="250416-erikdstock@users.noreply.gitlab.com"

@@ -3,7 +3,6 @@
 
 echo "Loading ~/.bashrc"
 
-
 # Location of this directory
 DOTFILES_PATH="$HOME/.dotfiles"
 
@@ -42,25 +41,6 @@ export EDITOR="$VISUAL"
 git_completion_script=/usr/local/etc/bash_completion.d/git-completion.bash
 test -s $git_completion_script && source $git_completion_script
 
-[ -e $HOME/.asdf/asdf.sh ] && source $HOME/.asdf/asdf.sh
-export ASDF_DIR=$(brew --prefix asdf)
-
-[ -e $HOME/.asdf/completions/asdf.bash ] && source $HOME/.asdf/completions/asdf.bash
-
-
-# # Rbenv autocomplete and shims (which means rvm shouldn't be installed)
-# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-# # Path for RBENV
-# test -d $HOME/.rbenv/ && PATH="$HOME/.rbenv/bin:$PATH"
-
-# # NVM
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# # PyEnv
-# if command -v pyenv 1>/dev/null 2>&1; then eval "$(pyenv init -)"; fi
-# if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 ### Mutally-exclusive prompt commands
 # Powerline Shell & term tabs
