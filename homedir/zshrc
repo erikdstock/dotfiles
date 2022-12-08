@@ -10,8 +10,9 @@ DOTFILES_PATH="$HOME/.dotfiles"
 [ -e $DOTFILES_PATH/scripts/path.sh ] && source $DOTFILES_PATH/scripts/path.sh
 [ -e $HOME/.keys/.env.sh ]               && source $HOME/.keys/.env.sh
 
-# Source asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
+# Source asdf (/usr/local/opt is the old version for previous brew systems)
+[ -e /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
+[ -e /opt/homebrew/opt/asdf/libexec/asdf.sh ] && . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 ### BEGIN OH-MY-ZSH CONFIG ###
 

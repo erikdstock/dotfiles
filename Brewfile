@@ -61,14 +61,11 @@ cask 'backblaze'
 cask 'bartender'
 cask 'bettertouchtool'
 cask 'grandperspective'
-cask 'spectacle'
+cask 'rectangle'
 cask 'gifox'
 
-cask 'dropbox'
-cask 'google-backup-and-sync'
-
-# cask 'skype'
 cask 'spotify'
+cask 'iina' # macos music player
 cask 'keybase'
 cask 'whatsapp'
 cask 'signal'
@@ -81,3 +78,7 @@ cask 'docker'
 cask 'rowanj-gitx'
 cask 'menumeters'
 
+
+# cask 'dropbox'
+# cask 'google-backup-and-sync'
+# cask 'skype'
