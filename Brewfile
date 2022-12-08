@@ -10,7 +10,7 @@ brew 'bash'
 brew 'zsh'
 brew 'macvim'
 
-cask 'java' unless system '/usr/libexec/java_home --failfast'
+# cask 'java' unless system '/usr/libexec/java_home --failfast'
 
 # unix stuff
 brew 'openssl'
@@ -39,10 +39,11 @@ cask 'font-fira-code'
 cask 'font-monoid'
 
 # general tools
-brew 'heroku'
+# brew 'heroku'
 brew 'hub'
+brew 'gh'
 brew 'watchman'
-brew 'exercism'
+# brew 'exercism'
 brew 'the_silver_searcher'
 brew 'trash'
 
@@ -66,7 +67,7 @@ cask 'gifox'
 cask 'dropbox'
 cask 'google-backup-and-sync'
 
-cask 'skype'
+# cask 'skype'
 cask 'spotify'
 cask 'keybase'
 cask 'whatsapp'
