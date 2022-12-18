@@ -6,7 +6,7 @@ echo "Loading ~/.bashrc"
 # Location of this directory
 DOTFILES_PATH="$HOME/.dotfiles"
 
-[ -e $DOTFILES_PATH/scripts/bash_prompt_commands.sh ] && source $DOTFILES_PATH/scripts/bash_prompt_commands.sh
+[ -e $DOTFILES_PATH/initializers/bash_prompt_commands.sh ] && source $DOTFILES_PATH/initializers/bash_prompt_commands.sh
 
 # PATH Setup
 
@@ -44,16 +44,16 @@ test -s $git_completion_script && source $git_completion_script
 
 ### Mutally-exclusive prompt commands
 # Powerline Shell & term tabs
-# [ -e $DOTFILES_PATH/scripts/prompt_commands.sh ] && source $DOTFILES_PATH/scripts/prompt_commands.sh
+# [ -e $DOTFILES_PATH/initializers/prompt_commands.sh ] && source $DOTFILES_PATH/initializers/prompt_commands.sh
 # DBC-style git prompt
-[ -e $DOTFILES_PATH/scripts/git_prompt.sh ] && source $DOTFILES_PATH/scripts/git_prompt.sh
+[ -e $DOTFILES_PATH/initializers/git_prompt.sh ] && source $DOTFILES_PATH/initializers/git_prompt.sh
 
 # Load aliases and helpers
-[ -e $DOTFILES_PATH/scripts/aliases.sh ] && source $DOTFILES_PATH/scripts/aliases.sh
-[ -e $DOTFILES_PATH/scripts/helpers.sh ] && source $DOTFILES_PATH/scripts/helpers.sh
-[ -e $DOTFILES_PATH/scripts/path.sh ] && source $DOTFILES_PATH/scripts/path.sh
+[ -e $DOTFILES_PATH/initializers/aliases.sh ] && source $DOTFILES_PATH/initializers/aliases.sh
+[ -e $DOTFILES_PATH/initializers/helpers.sh ] && source $DOTFILES_PATH/initializers/helpers.sh
+[ -e $DOTFILES_PATH/initializers/path.sh ] && source $DOTFILES_PATH/initializers/path.sh
 
 # Load gitignored secrets
-[ -e $HOME/.keys/.env.sh ] && source $HOME/.keys/.env.sh
+[ -e $HOME/.keys/.env ] && source $HOME/.keys/.env
 
 

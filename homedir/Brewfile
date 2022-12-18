@@ -1,0 +1,80 @@
+# Probably too specific to install all of this unless you know what you are doing
+cask_args appdir: '/Applications'
+tap 'homebrew/cask'
+tap 'homebrew/cask-versions'
+tap 'homebrew/cask-fonts'
+
+brew 'git'
+brew 'bash'
+brew 'zsh'
+brew 'macvim'
+
+# unix stuff
+brew 'openssl'
+brew 'libyaml' # should come after openssl
+brew 'git'
+
+# services & DBs
+brew 'postgresql@14'
+brew 'redis'
+brew 'sqlite'
+
+# languages
+# https://github.com/pyenv/pyenv/wiki/Common-build-problems
+brew 'readline'
+brew 'xz'
+
+brew 'asdf'
+# brew 'openjdk'
+# brew 'scala'
+
+# general tools
+brew 'hub'
+brew 'gh'
+brew 'watchman'
+brew 'the_silver_searcher'
+brew 'trash'
+
+# Apps
+
+cask 'font-fira-code'
+cask 'font-monoid'
+
+# # Must haves
+# cask 'bitwarden'
+# cask '1Password'
+# cask 'iterm2'
+# cask 'visual-studio-code'
+# cask 'backblaze'
+
+# # System tools
+# cask 'menumeters'
+# cask 'alfred3'
+# cask 'appcleaner'
+# cask 'bartender'
+# cask 'bettertouchtool'
+# cask 'grandperspective'
+# cask 'gifox'
+# cask 'rectangle'
+
+# ## Communication
+# cask 'slack'
+# cask 'discord'
+# cask 'whatsapp'
+# cask 'signal'
+# cask 'telegram'
+
+# ## macos music player
+# cask 'iina'
+# # Music
+# cask 'spotify'
+# # Photo library tools
+# cask 'powerphotos'
+
+# ## Dev tools
+# cask 'intellij-idea-ce'
+# cask 'docker'
+# cask 'rowanj-gitx'
+
+# cask 'dropbox'
+# cask 'google-backup-and-sync'

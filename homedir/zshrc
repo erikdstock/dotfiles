@@ -5,10 +5,10 @@
 DOTFILES_PATH="$HOME/.dotfiles"
 
 # Load aliases and helpers
-[ -e $DOTFILES_PATH/scripts/aliases.sh ] && source $DOTFILES_PATH/scripts/aliases.sh
-[ -e $DOTFILES_PATH/scripts/helpers.sh ] && source $DOTFILES_PATH/scripts/helpers.sh
-[ -e $DOTFILES_PATH/scripts/path.sh ] && source $DOTFILES_PATH/scripts/path.sh
-[ -e $HOME/.keys/.env.sh ]               && source $HOME/.keys/.env.sh
+[ -e $DOTFILES_PATH/initializers/aliases.sh ] && source $DOTFILES_PATH/initializers/aliases.sh
+[ -e $DOTFILES_PATH/initializers/helpers.sh ] && source $DOTFILES_PATH/initializers/helpers.sh
+[ -e $DOTFILES_PATH/initializers/path.sh ] && source $DOTFILES_PATH/initializers/path.sh
+[ -e $HOME/.keys/.env ]               && source $HOME/.keys/.env
 
 # Source asdf (/usr/local/opt is the old version for previous brew systems)
 [ -e /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
@@ -116,4 +116,3 @@ plugins=(git kube-ps1 xcode asdf)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH="$HOME/.poetry/bin:$PATH"
