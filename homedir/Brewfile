@@ -64,6 +64,11 @@ cask 'font-monoid'
 # cask 'signal'
 # cask 'telegram'
 
+# cask 'brave-browser'
+# cask 'google-chrome'
+# cask 'firefox'
+# cask 'microsoft-edge'
+
 # ## macos music player
 # cask 'iina'
 # # Music
