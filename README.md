@@ -9,9 +9,8 @@ information. Try searching for my name.**
 
 ### Mac
 
-If using [strap](https://github.com/MikeMcQuaid/strap) authenticated with
-github: Strap will automatically clone and install dotfiles and the
-`~/.Brewfile`. See more tips to investigate
+If using [strap][strap] authenticated with github: Strap will automatically
+clone and install dotfiles and the `~/.Brewfile`. See more tips to investigate
 [here](https://gist.github.com/ChristopherA/a579274536aab36ea9966f301ff14f3f).
 
 If not: clone this directory to `~/.dotfiles` and run `./install`. To install
@@ -30,9 +29,13 @@ To install GUI applications using homebrew, double-check the contents of
   to be symlinked to `$HOME`
 - `./initializers`: Scripts shared and loaded from multiple dotfiles (eg PATH,
   aliases)
+- `./scripts/setup` + `strap-after-setup`: Automatically run around the
+  [strap][strap] process.
 
 ## Followups
 
+- Some GUI applications like backblaze require manual installation.
+- Activate icloud storage for documents if you want.
 - [Set up vundler](https://github.com/VundleVim/Vundle.vim)
 - If you have a `$HOME/.keys/.env` your zshrc/bashrc will source it- For example
   you may be able to do `git clone my-encrypted-repo.git ~/.keys` with, inside,
@@ -58,3 +61,5 @@ defaults write -g ApplePressAndHoldEnabled -bool false
 # Set custom screencapture location
 defaults write com.apple.screencapture location "$HOME/Documents/Screenshots"; killall SystemUIServer
 ```
+
+[strap]: https://github.com/MikeMcQuaid/strap

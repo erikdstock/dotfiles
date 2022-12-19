@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+brew doctor
+
+# disable the accent menu globally
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+gh auth login
