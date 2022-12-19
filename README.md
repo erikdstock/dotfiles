@@ -7,7 +7,7 @@ information. Try searching for my name.**
 
 ## Usage
 
-Mac:
+### Mac
 
 If using [strap](https://github.com/MikeMcQuaid/strap) authenticated with
 github: Strap will automatically clone and install dotfiles and the
@@ -16,6 +16,11 @@ github: Strap will automatically clone and install dotfiles and the
 
 If not: clone this directory to `~/.dotfiles` and run `./install`. To install
 brew dependencies run `brew bundle` from `~/.dotfiles/homedir`.
+
+#### Brew casks
+
+To install GUI applications using homebrew, double-check the contents of
+`./Caskfile` and then run `brew bundle --file=./Caskfile`.
 
 ## organization
 

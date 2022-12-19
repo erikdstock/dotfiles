@@ -1,0 +1,50 @@
+# Probably too specific to install all of this unless you know what you are doing
+cask_args appdir: '/Applications'
+tap 'homebrew/cask'
+tap 'homebrew/cask-versions'
+tap 'homebrew/cask-fonts'
+
+# Must haves
+cask 'bitwarden'
+cask '1Password'
+cask 'iterm2'
+cask 'visual-studio-code'
+cask 'backblaze'
+
+## Communication
+cask 'slack'
+cask 'discord'
+cask 'whatsapp'
+cask 'signal'
+cask 'telegram'
+
+## Browsers
+cask 'brave-browser'
+cask 'google-chrome'
+cask 'firefox'
+cask 'microsoft-edge'
+
+# System tools
+cask 'menumeters'
+cask 'alfred3'
+cask 'appcleaner'
+cask 'bartender'
+cask 'bettertouchtool'
+cask 'grandperspective'
+cask 'gifox'
+cask 'rectangle'
+
+## macos music player
+cask 'iina'
+# Music
+cask 'spotify'
+# Photo library tools
+cask 'powerphotos'
+
+## Dev tools
+cask 'intellij-idea-ce'
+cask 'docker'
+cask 'rowanj-gitx'
+
+cask 'dropbox'
+cask 'google-backup-and-sync'
