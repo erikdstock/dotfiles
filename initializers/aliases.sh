@@ -10,7 +10,6 @@ alias hpr="hokusai production run --tty"
 alias hdr="hokusai dev run --tty"
 alias bs="brew services"
 
-
 if type trash >> /dev/null; then
   alias rm='trash'
 fi

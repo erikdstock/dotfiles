@@ -3,7 +3,11 @@ set -euo pipefail
 
 brew doctor
 
+# Activate rosetta 2
+softwareupdate --install-rosetta
+
 # disable the accent menu globally
 defaults write -g ApplePressAndHoldEnabled -bool false
 
+# log into github
 gh auth login
