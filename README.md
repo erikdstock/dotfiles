@@ -21,16 +21,16 @@ brew dependencies run `brew bundle` from `~/.dotfiles/homedir`.
 To install GUI applications using homebrew, double-check the contents of
 `./Caskfile` and then run `brew bundle --file=./Caskfile`.
 
-## organization
+## Organization
 
-- `./install`: Run this to symlink dotfiles from `/homedir` to your `$HOME`
+- [`./install`](./install`): Run this to symlink dotfiles from `/homedir` to your `$HOME`
   directory.
-- `./homedir`: location of all loading scripts (`.bash_profile`, `.vimrc` etc)
+- [`./homedir`](./homedir): location of all loading scripts (`.bash_profile`, `.vimrc` etc)
   to be symlinked to `$HOME`
-- `./initializers`: Scripts shared and loaded from multiple dotfiles (eg PATH,
+- [`./initializers`](): Scripts shared and loaded from multiple dotfiles (eg PATH,
   aliases)
-- `./scripts/setup` + `strap-after-setup`: Automatically run around the
-  [strap][strap] process.
+- [`./scripts](./scripts): `setup` + `strap-after-setup` are automatically run around the
+  [strap][strap] process. But maybe you would like to run them too.
 
 ## Followups
 
