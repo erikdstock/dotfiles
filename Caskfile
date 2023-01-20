@@ -22,11 +22,11 @@ cask 'telegram'
 cask 'brave-browser'
 cask 'google-chrome'
 cask 'firefox'
-cask 'microsoft-edge'
+# cask 'microsoft-edge'
 
 # System tools
 cask 'menumeters'
-cask 'alfred3'
+cask 'alfred'
 cask 'appcleaner'
 cask 'bartender'
 cask 'bettertouchtool'
@@ -46,5 +46,6 @@ cask 'intellij-idea-ce'
 cask 'docker'
 cask 'rowanj-gitx'
 
+# Cloud stuff
 cask 'dropbox'
-cask 'google-backup-and-sync'
+
