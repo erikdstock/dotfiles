@@ -10,6 +10,7 @@
 	st = status
 	co = checkout
 	please = push --force-with-lease
+	plead = push --force-with-lease origin HEAD
 	commend = commit --amend --no-edit
 	ci = commit -v
 	it = !git init && git commit -m \"Initial commit.\" --allow-empty

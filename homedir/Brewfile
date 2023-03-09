@@ -32,6 +32,7 @@ brew 'gh'
 brew 'watchman'
 brew 'the_silver_searcher'
 brew 'trash'
+brew 'blueutil'
 
 # Apps
 
