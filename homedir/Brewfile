@@ -23,7 +23,7 @@ brew 'readline'
 brew 'xz'
 
 brew 'asdf'
-# brew 'openjdk'
+ brew 'openjdk'
 # brew 'scala'
 
 # general tools
