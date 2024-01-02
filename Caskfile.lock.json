@@ -1,0 +1,299 @@
+{
+  "entries": {
+    "tap": {
+      "homebrew/cask": {
+        "revision": "38e80d454b183b6f56fd09f9ac52736b0a449f43"
+      },
+      "homebrew/cask-versions": {
+        "revision": "0f96644d6b352c38c3e29e24e7508b1f95285480"
+      },
+      "homebrew/cask-fonts": {
+        "revision": "62cc58dccb06ec619fd5efefe30a6748abe32871"
+      }
+    },
+    "cask": {
+      "bitwarden": {
+        "version": "2022.12.0",
+        "options": {
+          "full_name": "bitwarden",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "1password": {
+        "version": "8.9.11",
+        "options": {
+          "full_name": "1Password",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "iterm2": {
+        "version": "3.4.18",
+        "options": {
+          "full_name": "iterm2",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "visual-studio-code": {
+        "version": "1.74.1",
+        "options": {
+          "full_name": "visual-studio-code",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "backblaze": {
+        "version": "8.5.0.652",
+        "options": {
+          "full_name": "backblaze",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "slack": {
+        "version": "4.29.149",
+        "options": {
+          "full_name": "slack",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "discord": {
+        "version": "0.0.270",
+        "options": {
+          "full_name": "discord",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "whatsapp": {
+        "version": "2.2246.10",
+        "options": {
+          "full_name": "whatsapp",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "signal": {
+        "version": "6.1.0",
+        "options": {
+          "full_name": "signal",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "telegram": {
+        "version": "9.2.1,240459",
+        "options": {
+          "full_name": "telegram",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "brave-browser": {
+        "version": "1.46.144.0,146.144",
+        "options": {
+          "full_name": "brave-browser",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "google-chrome": {
+        "version": "108.0.5359.124",
+        "options": {
+          "full_name": "google-chrome",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "firefox": {
+        "version": "108.0.1",
+        "options": {
+          "full_name": "firefox",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "microsoft-edge": {
+        "version": "108.0.1462.54",
+        "options": {
+          "full_name": "microsoft-edge",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "menumeters": {
+        "version": "2.1.6.1",
+        "options": {
+          "full_name": "menumeters",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "alfred3": {
+        "version": "3.8.6_972",
+        "options": {
+          "full_name": "alfred3",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "appcleaner": {
+        "version": "3.6.7,4301",
+        "options": {
+          "full_name": "appcleaner",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "bartender": {
+        "version": "4.2.21,42021",
+        "options": {
+          "full_name": "bartender",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "bettertouchtool": {
+        "version": "3.971,2136",
+        "options": {
+          "full_name": "bettertouchtool",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "grandperspective": {
+        "version": "3.0.0",
+        "options": {
+          "full_name": "grandperspective",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "gifox": {
+        "version": "2.5.0,020500.00",
+        "options": {
+          "full_name": "gifox",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "rectangle": {
+        "version": "0.64,70",
+        "options": {
+          "full_name": "rectangle",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "iina": {
+        "version": "1.3.1",
+        "options": {
+          "full_name": "iina",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "spotify": {
+        "version": "1.2.0.1165,abf054ab,1083",
+        "options": {
+          "full_name": "spotify",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "powerphotos": {
+        "version": "2.1.2,1923",
+        "options": {
+          "full_name": "powerphotos",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "intellij-idea-ce": {
+        "version": "2022.3,223.7571.182",
+        "options": {
+          "full_name": "intellij-idea-ce",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "docker": {
+        "version": "4.15.0,93002",
+        "options": {
+          "full_name": "docker",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "rowanj-gitx": {
+        "version": "0.15,1964",
+        "options": {
+          "full_name": "rowanj-gitx",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "dropbox": {
+        "version": "163.4.5456",
+        "options": {
+          "full_name": "dropbox",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "google-backup-and-sync": {
+        "version": null,
+        "options": {
+          "full_name": "google-backup-and-sync",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "ventura": {
+        "HOMEBREW_VERSION": "3.6.15-42-g7d04dd9",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "4f5fc71394fff9c5485d96dceb0b82dad28255b2",
+        "CLT": "14.2.0.0.1.1668646533",
+        "Xcode": "14.1",
+        "macOS": "13.1"
+      }
+    }
+  }
+}

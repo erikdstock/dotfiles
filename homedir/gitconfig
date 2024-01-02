@@ -3,7 +3,7 @@
 # Please adapt and uncomment the following lines:
 #	name = Erik Stockmeier
 	email = 9088720+erikdstock@users.noreply.github.com
-	name = Erik Stockmeier
+	name = Erik
 [core]
 	excludesfile = ~/.gitignore_global
 [alias]
@@ -34,3 +34,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[init]
+	defaultBranch = main

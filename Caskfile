@@ -44,7 +44,6 @@ cask 'powerphotos'
 ## Dev tools
 cask 'intellij-idea-ce'
 cask 'docker'
-cask 'rowanj-gitx'
 
 # Cloud stuff
 cask 'dropbox'
