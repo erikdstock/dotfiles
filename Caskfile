@@ -29,10 +29,11 @@ cask 'menumeters'
 cask 'alfred'
 cask 'appcleaner'
 cask 'bartender'
-cask 'bettertouchtool'
 cask 'grandperspective'
 cask 'gifox'
 cask 'rectangle'
+cask 'lunar'
+# cask 'bettertouchtool'
 
 ## macos music player
 cask 'iina'
