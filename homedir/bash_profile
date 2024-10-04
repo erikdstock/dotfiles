@@ -6,3 +6,5 @@ echo "Logged in as $USER at $(hostname)"
 source ~/.bashrc
 
 export PATH="$HOME/.poetry/bin:$PATH"
+[[ -e "$HOME/.asdf/asdf.sh" ]] && . "$HOME/.asdf/asdf.sh" 
+[[ -e "$HOME/.asdf/completions/asdf.bash" ]] && . "$HOME/.asdf/completions/asdf.bash"
