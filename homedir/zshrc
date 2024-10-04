@@ -10,6 +10,10 @@ DOTFILES_PATH="$HOME/.dotfiles"
 [ -e $DOTFILES_PATH/initializers/path.sh ] && source $DOTFILES_PATH/initializers/path.sh
 [ -e $HOME/.keys/.env ]               && source $HOME/.keys/.env
 
+# Sets JAVA_HOME for asdf java
+[ -e ~/.asdf/plugins/java/set-java-home.zsh ] && . ~/.asdf/plugins/java/set-java-home.zsh
+
+
 # Source asdf (/usr/local/opt is the old version for previous brew systems)
 # Handled by plugin
 # [ -e /usr/local/opt/asdf/libexec/asdf.sh ] && . /usr/local/opt/asdf/libexec/asdf.sh
@@ -117,3 +121,5 @@ plugins=(git kube-ps1 xcode asdf)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+source /opt/homebrew/opt/asdf/libexec/asdf.sh

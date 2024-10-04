@@ -18,6 +18,11 @@ test -d /usr/local/heroku/ && export PATH="/usr/local/heroku/bin:$PATH"
 # Path to custom version of postgres:
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
+# Set asdf java home if necessary
+[ -e ~/.asdf/plugins/java/set-java-home.bash ] && source ~/.asdf/plugins/java/set-java-home.bash
+
+
+
 
 # Colors ls should use for folders, files, symlinks etc, see `man ls` and
 # search for LSCOLORS
