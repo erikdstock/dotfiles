@@ -13,6 +13,8 @@
 	plead = push --force-with-lease origin HEAD
 	commend = commit --amend --no-edit
 	ci = commit -v
+	# Stage all changes (but not untracked files like with -A or .) and continue rebase
+	arc = !git add -u && git rebase --continue
 	it = !git init && git commit -m \"Initial commit.\" --allow-empty
 	s = status --short --branch
 	grog = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
